@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <h1>First things first!</h1>
 
       {/* Sidebar */}
+      <Sidebar />
 
       {/* Feed */}
       
