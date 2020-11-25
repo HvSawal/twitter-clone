@@ -13,23 +13,23 @@ function Post({
     return (
         <div className="post">
             <div className="post_avatar">
-            <Avatar src="https://pbs.twimg.com/profile_images/753092433278341120/sJdStorh_bigger.jpg" />
+                <Avatar src={avatar} />
             </div>
             <div className="post_body">
                 <div className="post_header">
                     <div className="post_headerText">
                         <h3>
-                            Harshvardhan Sawal {""}
+                            {displayName}{""}
                             <span className="post_headerSpecial">
-                                <VerifiedUserIcon className="post_badge" /> @hvsawal
+                                {verified && <VerifiedUserIcon className="post_badge" />} @{username}
                             </span>
                         </h3>
                     </div>
                     <div className="post_headerDescription">
-                        <p>This is my first try at a react app!</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media.tenor.com/images/a481f90b32a045b61d0c1de6bf893a5b/tenor.gif" alt=""></img>
+                <img src={image} alt=""></img>
                 <div className="post_footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
