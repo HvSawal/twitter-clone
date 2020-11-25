@@ -19,7 +19,7 @@ function Post({
                 <div className="post_header">
                     <div className="post_headerText">
                         <h3>
-                            {displayName}{""}
+                            {displayName}{" "}
                             <span className="post_headerSpecial">
                                 {verified && <VerifiedUserIcon className="post_badge" />} @{username}
                             </span>

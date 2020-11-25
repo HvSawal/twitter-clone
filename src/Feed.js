@@ -8,10 +8,11 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot => (
-            setPosts(snapshot.docs.map(doc => doc.data()))
-        ))
+        db.collection("posts").onSnapshot((snapshot) =>
+          setPosts(snapshot.docs.map((doc) => doc.data()))
+        );
     }, []);
+
     return (
         <div className="feed">
            {/* Header */}
@@ -27,7 +28,7 @@ function Feed() {
            {/* Posts */}
            {posts.map((post) => (
             <Post
-                key={post.text}
+                // key={post.text}
                 displayName={post.displayName}
                 username={post.username}
                 verified={post.verified}
@@ -36,9 +37,6 @@ function Feed() {
                 image={post.image}
             />
             ))}
-           <Post />
-           <Post />
-           <Post />
 
         </div>
     )
